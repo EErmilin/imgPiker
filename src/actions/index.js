@@ -1,16 +1,17 @@
+import * as types from '../lib/actionTypes';
+
 let nextTodoId = 1
-export const addDisc = (text) => {
+export const addDescription = (text) => {
     return{
-        type: 'ADD_DISCRIPTION',
+        type: types.ADD_DESCRIPTION,
         id: nextTodoId++,
         text,
-  
     }
     }
 
 export const selectImg = (text) => {
         return{
-            type: 'SELECT_IMG',
+            type: types.SELECT_IMG,
             text,
         }
         }

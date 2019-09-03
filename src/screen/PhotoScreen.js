@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { View, Text, TouchableOpacity, Image, Dimensions  } from 'react-native';
-import {discription} from '../routes'
+import {description} from '../routes'
 import styles from '../style'
 import CameraRoll from "@react-native-community/cameraroll";
 import {selectImg} from '../actions'
@@ -10,7 +10,7 @@ var { width } = Dimensions.get('window');
 var imgWidth = width;
 
 
-class fotoScreen extends Component{
+class PhotoScreen extends Component{
   state={
     photos:[],
     selectedImg:'',
@@ -26,7 +26,6 @@ class fotoScreen extends Component{
     })
     .catch((err) => {
     });
-    
   }
 
   _selectImg = (i) => {
@@ -61,7 +60,7 @@ class fotoScreen extends Component{
      })}
       </View>
       <View style={styles.footer}>
-      <TouchableOpacity onPress={()=>{navigation.navigate(discription);this.props.selectImg(this.state.selectedImg)}}style={styles.button}>
+      <TouchableOpacity onPress={()=>{navigation.navigate(description);this.props.selectImg(this.state.selectedImg)}}style={styles.button}>
         <Text>></Text>
       </TouchableOpacity>
       </View>
@@ -70,4 +69,4 @@ class fotoScreen extends Component{
 }
 }
 
-export default  connect(null, {selectImg})(fotoScreen);
+export default  connect(null, {selectImg})(PhotoScreen);

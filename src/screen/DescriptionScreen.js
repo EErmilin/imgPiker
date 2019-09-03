@@ -3,12 +3,12 @@ import { ScrollView,View,Text,TouchableOpacity,TextInput, Image,Dimensions } fro
 import {home} from '../routes'
 import styles from '../style'
 import { connect } from 'react-redux'
-import {addDisc} from '../actions'
+import {addDescription} from '../actions'
 
 var { width } = Dimensions.get('window');
 var imgWidth = width;
 
-class discriptionScreen extends Component{
+class DescriptionScreen extends Component{
   state={
     text:''
   }
@@ -28,7 +28,7 @@ class discriptionScreen extends Component{
       </View>
       </ScrollView>
       <View style={styles.footer}>
-      <TouchableOpacity onPress={()=>{this.props.addDisc(this.state.text);navigation.navigate(home)}}style={styles.button}>
+      <TouchableOpacity onPress={()=>{this.props.addDescription(this.state.text);navigation.navigate(home)}}style={styles.button}>
         <Text>\/</Text>
       </TouchableOpacity>
       </View>
@@ -39,7 +39,7 @@ class discriptionScreen extends Component{
 }
 
 const mapStateToProps = state => ({
-  imgUrl:state.reduser.uri
+  imgUrl:state.reducer.uri
 })
 
-export default  connect(mapStateToProps, {addDisc})(discriptionScreen);
+export default  connect(mapStateToProps, {addDescription})(DescriptionScreen);

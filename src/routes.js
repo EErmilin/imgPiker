@@ -1,3 +1,3 @@
 export const home= 'home'
-export const foto= 'foto'
-export const discription = 'discription'
+export const photo= 'photo'
+export const description = 'description'

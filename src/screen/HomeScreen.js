@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ScrollView,View,Text,TouchableOpacity,Image,Dimensions,PermissionsAndroid} from 'react-native';
-import {foto} from '../routes'
+import {photo} from '../routes'
 import styles from '../style'
 import { connect } from 'react-redux'
 
@@ -37,7 +37,7 @@ class HomeScreen extends Component{
       </View>
       
       <View style={styles.footer}>
-      <TouchableOpacity onPress={()=>navigation.navigate(foto)}style={styles.button}>
+      <TouchableOpacity onPress={()=>navigation.navigate(photo)}style={styles.button}>
         <Text>+</Text>
       </TouchableOpacity>
       </View>
@@ -54,7 +54,7 @@ const Post = ({ text, img }) => (
 )
 
 const mapStateToProps = state => ({
-  posts:state.reduser.posts
+  posts:state.reducer.posts
 })
 
 export default connect(mapStateToProps,null)(HomeScreen);

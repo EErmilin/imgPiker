@@ -1,14 +1,14 @@
 import {createStackNavigator} from 'react-navigation'
-import homeScreen from './homeScreen'
-import fotoScreen from './fotoScreen'
-import discriptionScreen from './discriptionScreen'
-import {home, foto, discription } from '../routes'
+import HomeScreen from './HomeScreen'
+import PhotoScreen from './PhotoScreen'
+import DescriptionScreen from './DescriptionScreen'
+import {home, photo, description } from '../routes'
 
 export default createStackNavigator(
   {
-  [home]: homeScreen,
-  [foto]: fotoScreen,
-  [discription]: discriptionScreen
+  [home]: HomeScreen,
+  [photo]: PhotoScreen,
+  [description]: DescriptionScreen
   },
   {
     headerMode : 'none'

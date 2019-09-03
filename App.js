@@ -1,10 +1,10 @@
 import Screen from './src/screen'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
-import reduser from './src/reduser'
+import reducer from './src/reducer'
 import React from 'react'
 
-const store = createStore(reduser)
+const store = createStore(reducer)
 
 const App = () =>{
 return(

@@ -1,12 +1,14 @@
+import * as types from '../lib/actionTypes';
+
 const initialState = 
   {
     posts:[],
     uri:''
   }
 
-const DiscriptionReduser = (state = initialState, action) => {
+const Reduser = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_DISCRIPTION':
+    case types.ADD_DESCRIPTION:
       return{ 
       ...state,
       posts: state.posts.concat({
@@ -16,7 +18,7 @@ const DiscriptionReduser = (state = initialState, action) => {
       })
       
     };
-    case 'SELECT_IMG':
+    case types.SELECT_IMG:
       return{ 
         ...state,
         uri:action.text,
@@ -28,4 +30,4 @@ const DiscriptionReduser = (state = initialState, action) => {
   }
 }
 
-export default DiscriptionReduser
+export default Reduser

@@ -1,0 +1,3 @@
+export const ADD_DESCRIPTION = 'ADD_DESCRIPTION';
+export const SELECT_IMG = 'SELECT_IMG';
+
