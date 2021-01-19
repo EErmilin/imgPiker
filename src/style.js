@@ -1,8 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
-
-var { height, width } = Dimensions.get('window');
-var imgHeight = height;
-var imgWidth = height;
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,6 +7,8 @@ const styles = StyleSheet.create({
   },
 
   header: {
+    justifyContent:'center',
+    alignItems:'center',
     backgroundColor: '#30d0fe',
     height: 60,
   },
